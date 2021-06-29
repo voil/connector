@@ -65,12 +65,49 @@ export default defineComponent({
 | Properties name | Required | Type | Default value | Descrption |
 | --------------- | :---------:| ---- | :-------------: | ---------- |
 | uniqueId |✅ | string | ---- | Unique id of element. |
-| position |✅ | { x: number, y: number } | ---- | Position of element. | 
+| position |✅ | PositionType|---- | Position of element. | 
 | canRemove |❌ | boolean | false | Property that determines whether an element can be deleted. |
 | canMove |❌ | boolean | false | Property that determines whether an element can be moved. |
 | connectorsPositions|❌ | ConnectorsPositions | ---- | Property that determines which connector show. |
 | connectionType |❌ | 'number', 'text', 'boolean', 'select' | ---- | Property that determines of connection type elements. |
 | additionalOptions |❌ | any | ---- | Additionals options of element. |
-| groups | | string[] | ---- | Property that specifies which group the item belongs to. |
+| groups |❌ | string[] | ---- | Property that specifies which group the item belongs to. |
 | canConnectGroup |❌ | string[] | ---- | Property that specifies which group can connect element. |
 | connectionTypeSelectOptions |❌ | ConnectionTypeSelectOptionsType | ---- | Property that specifies of select types for connection value. |
+
+### Element properties types:
+| Type name | properties | type |
+|-----------|------------|------|
+| PositionType| { x: number, y: number }, | object |
+| ConnectionTypeSelectOptionsType | { lable: string, value: number, string, boolean } | object |
+| ConnectorsPositions | LEFT, RIGHT, BOTTOM, TOP | enum |
+
+
+## IvrElement component arguments:
+| Argument name | required | type | description |
+| ------------- | :--------: | ---- | ----------- |
+| currentElement | ✅ | ElementType | Current element |.
+
+## IvrContent component arguments:
+| Argument name | required | type | description |
+| ------------- | :--------: | ---- | ----------- |
+| ivrScheme | ✅| SchemeTypeProp | Main scheme of ivr tree. |
+| isZoomActive | ❌| boolean | Is zoom plugin for Ivr tree is active. |
+| isAutoSaveActive|❌ | boolean | Is auto save plugin for Ivr tree is active. |
+| isRevisionActive | ❌ | boolean | Is revision plugin for Ivr tree is active. |
+| withAnimation |❌ | boolean | Is animation for Ivr tree is active. |
+| autoSaveDuration |❌ | number | Duration time for auto save plugin |
+
+### IvrContent component events methods:
+| Event name | required | arguments | description |
+| ---------- | -------- | --------- | ----------- |
+| onUpdate | ❌ | SchemeIvrTypeProp | Event fired when Ivr scheme updated |
+| onAutoSave | ❌ | ---- | Event fired when auto save plugin is active |
+
+
+
+
+
+
+
+
