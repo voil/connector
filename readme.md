@@ -62,15 +62,15 @@ export default defineComponent({
 ```
 
 ## Element properties
-| properties name | required | type | default value | descrption |
+| Properties name | Required | Type | Default value | Descrption |
 | --------------- | :---------:| ---- | :-------------: | ---------- |
-| uniqueId | | string | ---- | Unique id of element. |
-| position | | { x: number, y: number } | ---- | Position of element. | 
-| canRemove | | boolean | false | Property that determines whether an element can be deleted. |
-| canMove | | boolean | false | Property that determines whether an element can be moved. |
-| connectorsPositions| | ConnectorsPositions | ---- | Property that determines which connector show. |
-| connectionType | | 'number', 'text', 'boolean', 'select' | ---- | Property that determines of connection type elements. |
-| additionalOptions | | any | ---- | Additionals options of element. |
+| uniqueId |✅ | string | ---- | Unique id of element. |
+| position |✅ | { x: number, y: number } | ---- | Position of element. | 
+| canRemove |❌ | boolean | false | Property that determines whether an element can be deleted. |
+| canMove |❌ | boolean | false | Property that determines whether an element can be moved. |
+| connectorsPositions|❌ | ConnectorsPositions | ---- | Property that determines which connector show. |
+| connectionType |❌ | 'number', 'text', 'boolean', 'select' | ---- | Property that determines of connection type elements. |
+| additionalOptions |❌ | any | ---- | Additionals options of element. |
 | groups | | string[] | ---- | Property that specifies which group the item belongs to. |
-| canConnectGroup | | string[] | ---- | Property that specifies which group can connect element. |
-| connectionTypeSelectOptions | | ConnectionTypeSelectOptionsType | ---- | Property that specifies of select types for connection value. |
+| canConnectGroup |❌ | string[] | ---- | Property that specifies which group can connect element. |
+| connectionTypeSelectOptions |❌ | ConnectionTypeSelectOptionsType | ---- | Property that specifies of select types for connection value. |
