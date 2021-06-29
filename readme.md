@@ -1,3 +1,5 @@
+![alt text](https://files.fm/thumb_show.php?i=e8jj6wa82 "Title")
+
 ## Install
 ```shell
 yarn add voil/connector
@@ -97,6 +99,8 @@ export default defineComponent({
 | isRevisionActive | ❌ | boolean | Is revision plugin for Ivr tree is active. |
 | withAnimation |❌ | boolean | Is animation for Ivr tree is active. |
 | autoSaveDuration |❌ | number | Duration time for auto save plugin |
+| isFullscreenActive | | boolean | Is full screen plugin for Ivr tree is active. |
+| isMiniMapActive | | boolean | Is mini map plugin fo Ivr tree is active
 
 ### IvrContent component events methods:
 | Event name | required | arguments | description |
